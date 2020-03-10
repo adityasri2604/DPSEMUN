@@ -1,0 +1,552 @@
+* {
+      box-sizing: border-box;
+      margin: 0%;
+      padding: 0%;
+}
+
+/*--------------- hero section --------------- */
+
+.video-container {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+}
+
+video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+
+.video-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #1b1b1b;
+      opacity: 0.8;
+}
+
+.header {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align:center;
+      transform: translate(-50%, -50%);
+
+}
+
+.header h1 {
+
+      color: #FF7F50;
+      font-size: 80px !important;
+      font-family: 'Poppins', sans-serif
+}
+
+@media(max-width: 900px) {
+      .header {
+            left: 50%;
+      }
+
+      .header h1 {
+            font-size: 30px !important;
+            text-align: center;
+      }
+}
+.nav {
+      width: 100%;
+      height: 80px;
+      position: fixed;
+      z-index: 2;
+}
+.nav #brand img{
+height: 70px;
+width: 70px;
+position: absolute;
+transform: translateY(5px);
+}
+.nav.scrolled {
+      background-color:rgba(26, 51, 79,0.90) !important;
+      transition: background-color 500ms linear;
+}
+
+.nav #brand {
+      float: left;
+      display: block;
+      margin-left: 40px;
+      line-height: 80px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 18px;
+}
+
+.nav #brand a {
+      color: #fff;
+      font-family: Poppins !important;
+      transition: all 500ms ease-out;
+}
+
+.nav #brand a:hover {
+      text-decoration: none;
+}
+
+.nav #menu {
+      float: left;
+      right: 40px;
+      position: fixed;
+}
+
+.nav #menu li {
+      padding-left: 40px;
+      display: inline-block;
+      font-weight: lighter !important;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 80px;
+      position: relative;
+      transition: all 500ms ease-out;
+}
+
+.nav #menu li a {
+      font-family: Poppins !important;
+      color: #fff;
+      transition: all 500ms ease-out;
+}
+
+.nav #menu li a:hover {
+      text-decoration: none;
+      color: #FF7F50;
+      transition: all 500ms ease-out;
+}
+
+#toggle {
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+}
+
+.close-btn {
+      position: absolute;
+      right: 30px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      top: -2px;
+      line-height: 80px;
+}
+#resize {
+      z-index: 2;
+      top: 0px;
+      position: fixed;
+      background:rgba(26, 51, 79,0.75) ;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+}
+
+#resize #menu {
+      height: 90px;
+      position: absolute;
+      left: 45%;
+      transform: translateX(-40%);
+      text-align: center;
+      display: table-cell;
+      vertical-align: center;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 50px;
+      text-transform: uppercase;
+      height: 60px;
+      font-weight: bold;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top: 120px;
+}
+
+#resize #menu li a {
+      color: #fff;
+}
+
+#resize #menu li a:hover {
+      text-decoration: none;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 1;
+}
+
+@media(max-width: 900px) {
+      #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+            margin-right: 4px;
+      }
+
+      nav #brand {
+            margin-left: 10px;
+      }
+
+      #resize ul li a {
+            font-size: 15px;
+            font-family: "Poppins" !important;
+            font-weight: lighter !important;
+            color: #FFF !important;
+            transition: all 500ms ease-out;
+            letter-spacing: 2px;
+      }
+
+      nav #menu {
+            display: none;
+      }
+}
+
+@media(min-width: 900px) {
+      #resize {
+            visibility: hidden !important;
+      }
+}
+.content {
+      position: absolute;
+      margin-top: 100vh;
+      width: 100%;
+      background-color:#fff6e8;
+
+}
+
+section {
+      padding: 140px 0;
+}
+
+.section-index {
+      color: #FF7F50;
+      font-weight: bolder;
+      font-size: 20px;
+      font-family: Poppins !important;
+}
+
+.section-heading {
+      color: #4C5D70;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+}
+
+.section-subheading {
+      color: #FF7F50;
+      margin: 10px 0;
+      font-family: 'Playfair Display', serif;
+}
+
+.section-info {
+      font-size: 20px;
+      color: #4C5D70;
+      font-family: 'Poppins', sans-serif;
+}
+
+.more {
+      margin: 40px 0;
+}
+
+a button {
+      text-decoration:none;
+      font-family: 'Poppins', sans-serif;
+      color: #FF7F50;
+      border-radius: 4px;
+}
+
+button{
+background: none;
+border: 1pt solid #FF7F50;
+text-transform: uppercase !important;
+font-size: 16px !important;
+letter-spacing: 2px;
+padding: 18px 36px;
+font-family: 'Poppins', sans-serif;
+border-radius: 4px;
+}
+
+a button:hover{
+  background-color: #FF7F50;
+  color: #FBE5C0;
+  transition: 0.6s ease-out;
+  border: 1pt solid #FF7F50;
+}
+
+a button1 {
+      font-family: 'Poppins', sans-serif;
+      color: #FF7F50;
+      border-radius: 4px;
+}
+
+button1{
+background: none;
+border: 1pt solid #FF7F50;
+text-transform: uppercase !important;
+font-size: 16px !important;
+letter-spacing: 2px;
+padding: 18px 36px;
+font-family: 'Poppins', sans-serif;
+text-align: center;
+}
+
+a button1:hover{
+  background-color: #FF7F50;
+  color: #FBE5C0;
+  transition: 0.6s ease-out;
+  border: 1pt solid #FF7F50;
+}
+@media(max-width: 900px) {
+  .section-info{
+    font-size: 18px;
+  }
+}
+/*--------------- number section starts  --------------- */
+.services {
+      background: rgb(26, 51, 79);
+}
+
+.service {
+      margin: 30px 0;
+}
+
+.icon .num{
+      font-size: 32px;
+      color:#FF7F50 ;
+      font-family: 'Poppins', sans-serif;
+}
+
+.icon-title {
+      font-size: 24px;
+      margin-bottom: 4px;
+      color: #fff6e8;
+      font-weight: lighter;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 2px;
+}
+
+.team-member, .team-img {
+      position: relative;
+}
+
+.team-img {
+      background: rgba(26, 51, 79,1);
+      height: 340px;
+      min-width: 200px;
+}
+
+.members {
+      margin: 50px 0;
+}
+
+.team-title {
+      margin: 20px 0;
+}
+
+.team-title h5 {
+      font-size: 28px;
+      color: rgba(26, 51, 79,1);
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+}
+
+.team-title span {
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      color: #FF7F50;
+}
+
+.team-member {
+      overflow: hidden;
+}
+
+.team-one {
+      background: url(team1.png) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.team-two {
+      background: url(team2.png) no-repeat 50% 50%;
+      background-size: cover;
+}
+.team-three {
+  background: url(team3.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+.newsletter {
+      padding: 60px 0;
+      background:  rgb(26, 51, 79);
+}
+
+.newsletter input {
+      text-transform: uppercase;
+}
+
+.newsletter .news-data {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+}
+
+.newsletter .section-subheading h1 {
+      color:  #fff6e8;
+      margin-bottom: 40px;
+      font-family: 'Poppins',sans-serif;
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+}
+
+.newsletter .btn{
+  background: rgb(26, 51, 79);
+  color: #FF7F50;
+  border: 1pt solid #FF7F50;
+  text-transform: uppercase !important;
+  font-size: 16px !important;
+  letter-spacing: 2px;
+  padding: 18px 60px;
+  font-family: 'Poppins', sans-serif;
+  }
+.newsletter .btn:hover{
+    background-color:#FF7F50;
+    color: rgb(26, 51, 79);
+    transition: 0.6s ease-in;
+    border: 1pt solid #FF7F50;
+}
+.newsletters{
+  padding: 60px 0;
+}
+.newsletters input {
+      text-transform: uppercase;
+}
+
+.newsletters .news-data {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+}
+
+.newsletters .section-subheading h1 {
+      color: rgb(26, 51, 79);
+      margin-bottom: 40px;
+      font-family: 'Poppins',sans-serif;
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+}
+
+.newsletters .btn{
+  background-color:#fff6e8;
+  color: #FF7F50;
+  border: 1pt solid #FF7F50;
+  text-transform: uppercase !important;
+  font-size: 16px !important;
+  letter-spacing: 2px;
+  padding: 18px 60px;
+  font-family: 'Poppins', sans-serif;
+  }
+.newsletters .btn:hover{
+    background-color:#FF7F50;
+    color: #fff6e8;
+    transition: 0.6s ease-in;
+    border: 1pt solid #FF7F50;
+}
+.footer {
+      background: rgb(26, 51, 79);
+}
+
+#media, #address, #mail,  {
+      text-align: center !important;
+}
+
+.footer .container {
+      padding: 80px 0;
+}
+
+.footer li, p, h4 {
+      font-size: 24px !important;
+      font-family: 'Playfair Display', serif;
+}
+
+.footer h4 {
+      font-weight: lighter;
+      color: #fff6e8;
+}
+
+.footer p {
+      color: #FF7F50;
+      font-weight: lighter;
+      font-family: 'Poppins', sans-serif;
+}
+
+.footer li {
+      color: #fff6e8;
+      padding-left: 20px;
+      font-size: 18px !important;
+      text-align: center;
+      font-size: 28px;
+}
+
+#media ul {
+      list-style: none;
+}
+
+#media ul li {
+      display: inline-block;
+
+}
+
+@media(max-width: 900px) {
+      .footer .container {
+            width: 92% !important;
+      }
+}
+.newsletter h4 a{
+  color:  #fff6e8;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.newsletter hr{
+  border-color: #FF7F50;
+}
+.line hr{
+  border-color: #FF7F50;
+
+}
+svg{
+  background-color: rgb(26, 51, 79);
+}

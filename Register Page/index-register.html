@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Register | DPSEMUN</title>
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="styles-register.css">
+
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Kalam|Playfair+Display|Poppins|Teko&display=swap" rel="stylesheet">
+
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- icons -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+      <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+      <!-- fontawesome-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+      <!--number counting-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+      <script src="testing.js"></script>
+</head>
+<body>
+  <!-------------- hero starts here --------------->
+  <div class="photo-container">
+                  <img src="DSC_0246.JPG" alt="">
+            </div>
+            <div class="header">
+                  <h1>REGISTER</h1>
+            </div>
+<!-----Hero ends here------>
+<!--------------- navbar starts here --------------->
+
+            <nav class="nav">
+                  <span id="brand">
+                        <a href="index.html">DPSEMUN</a>
+                  </span>
+                  <ul id="menu">
+                        <li><a href="#about">Home</a></li>
+                        <li><a href="#team">About us</a></li>
+                        <li><a href="###">Committees</a></li>
+                        <li><a href="###">Sponsors</a></li>
+                        <li><a href="###">Payment</a></li>
+                        <li><a href="###">Contact</a></li>
+                  </ul>
+
+                  <div id="toggle">
+                        <div class="span">menu</div>
+                  </div>
+            </nav>
+
+            <div id="resize">
+                  <div class="close-btn">close</div>
+
+                  <ul id="menu">
+                    <li><a href="#about">Home</a></li>
+                    <li><a href="#team">About us</a></li>
+                    <li><a href="###">Committees</a></li>
+                    <li><a href="###">Sponsors</a></li>
+                    <li><a href="###">Payment</a></li>
+                    <li><a href="###">Contact</a></li>
+                  </ul>
+            </div>
+            <!-------------- navbar ends here --------------->
+<div class="content">
+<!---Registration area starts--->
+<section>
+<div class="container-fluid"></div>
+<div class="row" style="margin-left: 0px; margin-right: 0px; height:400px;">
+
+<!--Delegate-->
+<div class="col-md-6 del">
+    <div class="section-index wow fadeInUp" data-wow-delay="0.3s">01</div>
+  <H1 class="HEADING wow fadeInUp" data-wow-delay="0.4s">DELEGATE/ IP</H1>
+  <h2 class="sub-heading wow fadeInUp" data-wow-delay="0.4s">Applications</h2>
+  <h4 class="sub-heading wow fadeInUp" data-wow-delay="0.6s">Priority Applications Closed</h4>
+  <a href="" class="wow fadeInUp" data-wow-delay="0.8s"><button id="btn">REGISTER</button></A>
+</div>
+<!--EB-->
+<div class="col-md-6 eb">
+  <div class="section-index wow fadeInUp" data-wow-delay="0.3s">02</div>
+  <H1 class="HEADING wow fadeInUp" data-wow-delay="0.4s">EXECUTIVE BOARD</H1>
+  <h2 class="sub-heading wow fadeInUp" data-wow-delay="0.4s">Applications</h2>
+  <h4 class="sub-heading wow fadeInUp" data-wow-delay="0.6s">EB Applications Closed</h4>
+  <a href="" class="wow fadeInUp" data-wow-delay="0.8s"><button id="btn">REGISTER</button></A>
+</div>
+</div>
+</section>
+<!---Registration area ends--->
+</div>
+
+<!--JAVA-->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+           <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="./script.js"></script>
+<script>
+// navigation starts here
+$("#toggle").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $("#resize ul li a").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $(".close-btn").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".nav");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+new WOW().init();
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+</script>
+</body>
+</html>
